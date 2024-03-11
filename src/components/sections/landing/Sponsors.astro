@@ -1,9 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import LandingButton from "@components/LandingButton.astro";
-import sponsorDisney from "@assets/images/sponsor-disney.svg";
-import sponsorNetflix from "@assets/images/sponsor-netflix.svg";
-import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
+import sponsorGenius from "@assets/images/sponsor-genius.png";
+import sponsorAudion from "@assets/images/sponsor-audion.png";
 ---
 
 <section>
@@ -12,9 +11,8 @@ import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
     ¡Conviértete en sponsor del Codesafío y marca la diferencia!
   </p>
   <div class="sponsors-group">
-    <Image src={sponsorDisney} alt="Sponsor Disney" loading="lazy" />
-    <Image src={sponsorNetflix} alt="Sponsor Netflix" loading="lazy" />
-    <Image src={sponsorSpotify} alt="Sponsor Spotify" loading="lazy" />
+    <Image src={sponsorGenius} alt="Sponsor Netflix" loading="eager" />
+    <Image src={sponsorAudion} alt="Sponsor Disney" loading="eager" />
   </div>
   <LandingButton text="Ser Sponsor" href="#" usePrimaryColor />
 </section>
@@ -52,7 +50,7 @@ import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
       height: 100%;
       max-width: 100px;
       aspect-ratio: 88.33 / 43;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 </style>

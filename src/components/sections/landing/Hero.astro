@@ -1,14 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import LandingButton from "@components/LandingButton.astro";
-import sponsorDisney from "@assets/images/sponsor-disney.svg";
-import sponsorNetflix from "@assets/images/sponsor-netflix.svg";
-import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
+import sponsorGenius from "@assets/images/sponsor-genius.png";
+import sponsorAudion from "@assets/images/sponsor-audion.png";
 ---
 
 <section>
   <h1 class="montserrat-extrabold">
-    El hackathon más esperado de Venezuela <strong
+    El hackathon más esperado de la comunidad universitaria <strong
       >¡El <span>Codesafío</span>!</strong
     >
   </h1>
@@ -16,7 +15,12 @@ import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
     Enfrenta grandes equipos y crea soluciones innovadoras
   </p>
   <div class="buttons-container">
-    <LandingButton text="Estoy interesado" href="#" usePurpleColor />
+    <LandingButton
+      text="Estoy interesado"
+      href="https://forms.gle/RxSahhsZD7yLuFCW6"
+      useBlankTarget
+      usePurpleColor
+    />
     <LandingButton text="Ser Sponsor" href="#" usePrimaryColor />
   </div>
   <div class="sponsors-container">
@@ -24,9 +28,8 @@ import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
       Algunos de nuestros sponsors más fieles
     </p>
     <div class="sponsors-group">
-      <Image src={sponsorDisney} alt="Sponsor Disney" loading="eager" />
-      <Image src={sponsorNetflix} alt="Sponsor Netflix" loading="eager" />
-      <Image src={sponsorSpotify} alt="Sponsor Spotify" loading="eager" />
+      <Image src={sponsorGenius} alt="Sponsor Netflix" loading="eager" />
+      <Image src={sponsorAudion} alt="Sponsor Disney" loading="eager" />
     </div>
   </div>
 </section>
@@ -87,7 +90,7 @@ import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
       height: 100%;
       max-width: 100px;
       aspect-ratio: 88.33 / 43;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 </style>

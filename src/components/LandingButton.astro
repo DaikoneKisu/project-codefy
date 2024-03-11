@@ -2,6 +2,7 @@
 interface Props {
   href: string;
   text: string;
+  useBlankTarget?: boolean;
   usePrimaryColor?: boolean;
   usePurpleColor?: boolean;
 }
@@ -9,12 +10,14 @@ interface Props {
 const {
   href,
   text,
+  useBlankTarget = false,
   usePrimaryColor = false,
   usePurpleColor = false,
 } = Astro.props;
 ---
 
 <a
+  target={useBlankTarget ? "_blank" : "_self"}
   href={href}
   class:list={[
     {

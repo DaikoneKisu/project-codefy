@@ -1,26 +1,46 @@
 ---
-import twitterXLogo from "@assets/images/twitter-x-logo.png";
+import { Image } from "astro:assets";
+import instagramLogo from "@assets/images/instagram-logo.svg";
+import facebookLogo from "@assets/images/facebook-logo.svg";
+import twitterXLogo from "@assets/images/twitter-x-logo.svg";
 ---
 
 <footer>
-  <small>Realizado por TechGroupUcab ❤</small>
+  <small class="montserrat-semibold">Realizado por Offside 💖</small>
   <div>
-    <a href="#" target="_blank">
-      <img src={twitterXLogo.src} alt="Instagram" />
+    <a href="#">
+      <Image src={instagramLogo} alt="Instagram" />
     </a>
-    <a href="#" target="_blank">
-      <img src={twitterXLogo.src} alt="Facebook" />
+    <a href="#">
+      <Image src={facebookLogo} alt="Facebook" />
     </a>
-    <a href="#" target="_blank">
-      <img src={twitterXLogo.src} alt="Twitter/X" />
+    <a href="#">
+      <Image src={twitterXLogo} alt="Twitter/X" />
     </a>
   </div>
 </footer>
 
 <style>
   footer {
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  small {
+    color: var(--primary);
+    font-size: 0.75rem;
+  }
+  a {
+    width: 21px;
+    height: 21px;
+  }
+  img {
+    width: 21px;
+    height: 21px;
+  }
+  div {
+    display: flex;
+    gap: 1rem;
   }
 </style>
