@@ -1,0 +1,47 @@
+---
+interface Props {
+  href: string;
+  text: string;
+  usePrimaryColor?: boolean;
+  usePurpleColor?: boolean;
+}
+
+const {
+  href,
+  text,
+  usePrimaryColor = false,
+  usePurpleColor = false,
+} = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    {
+      "primary-color": usePrimaryColor,
+      "purple-color": usePurpleColor,
+    },
+    "montserrat-semibold",
+  ]}>{text}</a
+>
+
+<style>
+  a {
+    display: inline-flex;
+    width: 222px;
+    height: 43px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  .primary-color {
+    color: var(--primary);
+    border: 3px solid var(--primary);
+  }
+  .purple-color {
+    color: var(--white);
+    background-color: var(--purple);
+  }
+</style>

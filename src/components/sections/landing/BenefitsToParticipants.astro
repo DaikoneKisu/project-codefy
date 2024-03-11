@@ -1,0 +1,53 @@
+---
+import BenefitsCard from "@components/BenefitsCard.astro";
+import LandingButton from "@components/LandingButton.astro";
+import benefitsSkills from "@assets/images/benefits-skills.png";
+import benefitsNetworking from "@assets/images/benefits-networking.png";
+import benefitsPrizes from "@assets/images/benefits-prizes.png";
+---
+
+<section>
+  <h2 class="montserrat-extrabold">Beneficios a los participantes</h2>
+  <BenefitsCard
+    text="Aumenta tus habilidades de desarrollo de software realizando un producto en menos de 72 horas"
+    backgroundImage={benefitsSkills}
+  />
+  <BenefitsCard
+    text="Tendrás la oportunidad de conocer más personas en el mundo tech y ampliar tu red de LinkedIn"
+    backgroundImage={benefitsNetworking}
+  />
+  <BenefitsCard
+    text="Celebra tus victorias y gana premios emocionantes gracias a nuestros sponsors"
+    backgroundImage={benefitsPrizes}
+  />
+  <p class="montserrat-medium">
+    ¡Regístrate ahora en el Codesafío y vive una experiencia inolvidable!
+  </p>
+  <LandingButton text="Estoy Interesado" href="#" usePurpleColor />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.375rem;
+    color: var(--primary);
+    text-align: center;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    margin-top: 1rem;
+    width: 328px;
+    font-size: 1.375rem;
+    color: var(--primary);
+    opacity: 0.6;
+    text-align: center;
+    text-wrap: pretty;
+  }
+</style>

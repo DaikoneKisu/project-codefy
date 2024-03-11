@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import LandingButton from "@components/LandingButton.astro";
+import sponsorDisney from "@assets/images/sponsor-disney.svg";
+import sponsorNetflix from "@assets/images/sponsor-netflix.svg";
+import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
+---
+
+<section>
+  <h1 class="montserrat-extrabold">
+    El hackathon más esperado de Venezuela <strong
+      >¡El <span>Codesafío</span>!</strong
+    >
+  </h1>
+  <p class="montserrat-medium">
+    Enfrenta grandes equipos y crea soluciones innovadoras
+  </p>
+  <div class="buttons-container">
+    <LandingButton text="Estoy interesado" href="#" usePurpleColor />
+    <LandingButton text="Ser Sponsor" href="#" usePrimaryColor />
+  </div>
+  <div class="sponsors-container">
+    <p class="sponsors-introduction montserrat-extrabold">
+      Algunos de nuestros sponsors más fieles
+    </p>
+    <div class="sponsors-group">
+      <Image src={sponsorDisney} alt="Sponsor Disney" loading="eager" />
+      <Image src={sponsorNetflix} alt="Sponsor Netflix" loading="eager" />
+      <Image src={sponsorSpotify} alt="Sponsor Spotify" loading="eager" />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  h1 {
+    margin: 0;
+    width: 300px;
+    font-size: 32px;
+    text-align: center;
+    text-wrap: balance;
+    color: var(--primary);
+    span {
+      color: var(--secondary);
+    }
+  }
+  p.montserrat-medium {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--primary);
+    opacity: 0.6;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .buttons-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .sponsors-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .sponsors-introduction {
+    margin: 0;
+    width: 355px;
+    font-size: 1.375rem;
+    color: var(--primary);
+    text-align: center;
+    text-wrap: pretty;
+  }
+  .sponsors-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100px;
+      aspect-ratio: 88.33 / 43;
+      object-fit: cover;
+    }
+  }
+</style>

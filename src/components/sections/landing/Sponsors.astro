@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import LandingButton from "@components/LandingButton.astro";
+import sponsorDisney from "@assets/images/sponsor-disney.svg";
+import sponsorNetflix from "@assets/images/sponsor-netflix.svg";
+import sponsorSpotify from "@assets/images/sponsor-spotify.svg";
+---
+
+<section>
+  <h2 class="montserrat-extrabold">Sponsors</h2>
+  <p class="montserrat-medium">
+    ¡Conviértete en sponsor del Codesafío y marca la diferencia!
+  </p>
+  <div class="sponsors-group">
+    <Image src={sponsorDisney} alt="Sponsor Disney" loading="lazy" />
+    <Image src={sponsorNetflix} alt="Sponsor Netflix" loading="lazy" />
+    <Image src={sponsorSpotify} alt="Sponsor Spotify" loading="lazy" />
+  </div>
+  <LandingButton text="Ser Sponsor" href="#" usePrimaryColor />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.375rem;
+    color: var(--primary);
+    text-align: center;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    width: 328px;
+    font-size: 1.375rem;
+    color: var(--primary);
+    opacity: 0.6;
+    text-align: center;
+    text-wrap: pretty;
+  }
+  .sponsors-group {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100px;
+      aspect-ratio: 88.33 / 43;
+      object-fit: cover;
+    }
+  }
+</style>

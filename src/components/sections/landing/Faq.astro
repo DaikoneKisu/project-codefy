@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import FaqDropdown from "@components/FaqDropdown.astro";
+import faqImage from "@assets/images/faq.png";
+---
+
+<section>
+  <h2 class="montserrat-extrabold">Preguntas frecuentes</h2>
+  <Image src={faqImage} alt="" />
+  <FaqDropdown />
+  <FaqDropdown />
+  <FaqDropdown />
+  <FaqDropdown />
+  <FaqDropdown />
+  <FaqDropdown />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.375rem;
+    color: var(--primary);
+    text-align: center;
+    text-wrap: balance;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 230px;
+    max-height: 189px;
+    aspect-ratio: 230 / 189;
+    object-fit: cover;
+  }
+</style>

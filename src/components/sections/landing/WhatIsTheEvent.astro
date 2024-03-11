@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import whatIsTheEventImg from "@assets/images/what-is-the-event.png";
+---
+
+<section>
+  <h2 class="montserrat-extrabold">¿En qué consiste el evento?</h2>
+  <p class="montserrat-medium">
+    El codesafío es un evento competitivo el cual consiste en desarrollar una
+    solución tecnológica a un problema determinado.
+  </p>
+  <Image src={whatIsTheEventImg} alt="" />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.375rem;
+    color: var(--primary);
+    text-align: center;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 328px;
+    font-size: 1.375rem;
+    color: var(--primary);
+    opacity: 0.6;
+    text-align: center;
+    text-wrap: pretty;
+  }
+  img {
+    width: 100%;
+    aspect-ratio: 344 / 131;
+    max-width: 344px;
+    max-height: 131px;
+  }
+</style>
